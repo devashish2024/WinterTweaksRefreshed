@@ -17,7 +17,6 @@ export default function App() {
           <Route path="/dashboard/" element={<DashboardLayout />}>
             <Route index element={<DashboardHome />} />
             <Route path="tweaks" element={<DashboardTweaks />} />
-            <Route path="disk-cleanup" element={"Disk Cleanup"} />
             <Route path="help" element={"Help"} />
             <Route path="settings" element={"Settings"} />
           </Route>

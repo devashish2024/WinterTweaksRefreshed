@@ -86,11 +86,6 @@ const Sidebar = () => {
       icon: <Settings2 />,
       label: "Tweaks",
     },
-    {
-      to: "/dashboard/disk-cleanup",
-      icon: <HardDrive />,
-      label: "Disk Cleanup",
-    },
   ];
 
   const bottomLinks = [
