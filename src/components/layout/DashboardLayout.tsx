@@ -50,13 +50,15 @@ const DashboardLayout = () => {
                     className="size-8 rounded-full"
                   />
                 </Link>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="hover:!bg-red-600 cursor-pointer"
-                >
-                  <LogOut className="h-4 w-4" />
-                </Button>
+                <Link to="/">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="hover:!bg-red-600 cursor-pointer"
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
 

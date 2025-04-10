@@ -13,14 +13,12 @@ const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleDiscordLogin = async () => {
-    alert(
-      "Handle the authentication here\n\nStart the OAuth flow: redirect user to Discord OAuth endpoint"
-    );
-
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+
+      window.location.href = "/dashboard";
+    }, 4000);
   };
 
   return (

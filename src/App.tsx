@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import DashboardHome from "./pages/Dashboard/Home/index";
 import DashboardTweaks from "./pages/Dashboard/Tweaks/index";
+import LoginForm from "./pages/Login";
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
 
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<LoginForm />} />
+
           <Route path="/dashboard/" element={<DashboardLayout />}>
             <Route index element={<DashboardHome />} />
             <Route path="tweaks" element={<DashboardTweaks />} />
