@@ -1,40 +1,67 @@
+import { useMemo } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import discordIcon from "../../assets/discord.svg";
+import { Button } from "../ui/button";
+import { LogOut } from "lucide-react";
 
-const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+const routeTitleMap: Record<string, string> = {
+  "/dashboard": "Dashboard",
+  "/dashboard/tweaks": "Tweaks",
+  "/dashboard/disk-cleanup": "Disk Cleanup",
+  "/dashboard/help": "Help",
+  "/dashboard/settings": "Settings",
+};
+
+const DashboardLayout = () => {
+  const { pathname } = useLocation();
+
+  const pageTitle = useMemo(() => {
+    if (routeTitleMap[pathname]) return routeTitleMap[pathname];
+
+    return "Dashboard";
+  }, [pathname]);
+
   return (
     <div className="flex h-screen bg-gray-900">
       <Sidebar />
       <div className="flex flex-col flex-grow">
-        <div className="bg-gray-800 shadow-lg border-b border-blue-400/20 py-4 px-6 flex items-center justify-between ml-16 z-0">
-          <div className="flex items-center">
-            <h1 className="text-xl font-semibold text-white">Dashboard</h1>
-          </div>
-          <div className="flex items-center space-x-4">
-            <button className="text-blue-300 hover:text-blue-100 transition-colors">
-              <a href="#" target="_blank">
-                <img
-                  src={discordIcon}
-                  alt="Join our discord for giveaways and more!"
-                  className="size-6 text-blue-500"
-                />
-              </a>
-            </button>
-            <div className="h-6 w-px bg-gray-600"></div>
-            <div className="relative group">
-              <a href="#">
-                <img
-                  src="https://lh3.googleusercontent.com/a/ACg8ocKJI8BL07cNuzTM3C-3wMRvlx866vPAR6h4OTkygRKlLE4ipd1r=s288-c-no"
-                  alt=""
-                  className="size-8 rounded-full"
-                />
-              </a>
+        <main className="flex-grow p-6 mt-2 ml-16 overflow-auto text-gray-200">
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center justify-between">
+              <h1 className="text-3xl font-bold tracking-tight">{pageTitle}</h1>
+              <div className="flex items-center space-x-4">
+                <Link
+                  to="#"
+                  target="_blank"
+                  className="text-blue-300 hover:text-blue-100 transition-colors"
+                >
+                  <img
+                    src={discordIcon}
+                    alt="Join our discord for giveaways and more!"
+                    className="size-6"
+                  />
+                </Link>
+                <div className="h-6 w-px bg-gray-600"></div>
+                <Link to="/dashboard/settings">
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocKJI8BL07cNuzTM3C-3wMRvlx866vPAR6h4OTkygRKlLE4ipd1r=s288-c-no"
+                    alt="User profile"
+                    className="size-8 rounded-full"
+                  />
+                </Link>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="hover:!bg-red-600 cursor-pointer"
+                >
+                  <LogOut className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <main className="flex-grow p-6 ml-16 overflow-auto text-gray-200">
-          {children}
+            <Outlet />
+          </div>
         </main>
       </div>
     </div>

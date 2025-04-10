@@ -2,9 +2,9 @@ import {
   Snowflake,
   Home,
   Settings2,
-  Trash2,
   HelpCircle,
   Settings,
+  HardDrive,
 } from "lucide-react";
 import {
   Tooltip,
@@ -12,6 +12,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Link } from "react-router-dom";
 
 type SidebarLinkProps = {
   to: string;
@@ -32,8 +33,8 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({
     <TooltipProvider delayDuration={300}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <a
-            href={to}
+          <Link
+            to={to}
             className={`
               w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200
               ${
@@ -61,7 +62,7 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({
             {isActive && !isLogo && (
               <span className="absolute -bottom-1 w-5 h-1 bg-[#33C3F0] rounded-full shadow-[0_0_4px_rgba(51,195,240,0.6)]"></span>
             )}
-          </a>
+          </Link>
         </TooltipTrigger>
         <TooltipContent side="right" sideOffset={10} className="dark">
           <p>{label}</p>
@@ -75,18 +76,18 @@ const Sidebar = () => {
   // Main navigation links
   const mainLinks = [
     {
-      to: "/",
+      to: "/dashboard/",
       icon: <Home />,
       label: "Home",
     },
     {
-      to: "/tweaks",
+      to: "/dashboard/tweaks",
       icon: <Settings2 />,
       label: "Tweaks",
     },
     {
-      to: "/disk-cleanup",
-      icon: <Trash2 />,
+      to: "/dashboard/disk-cleanup",
+      icon: <HardDrive />,
       label: "Disk Cleanup",
     },
   ];
@@ -94,12 +95,12 @@ const Sidebar = () => {
   // Bottom navigation links
   const bottomLinks = [
     {
-      to: "/help",
+      to: "/dashboard/help",
       icon: <HelpCircle />,
       label: "Help",
     },
     {
-      to: "/settings",
+      to: "/dashboard/settings",
       icon: <Settings />,
       label: "Settings",
     },
