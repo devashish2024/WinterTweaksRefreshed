@@ -12,7 +12,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 type SidebarLinkProps = {
   to: string;
@@ -73,10 +73,11 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({
 };
 
 const Sidebar = () => {
-  // Main navigation links
+  const { pathname } = useLocation();
+
   const mainLinks = [
     {
-      to: "/dashboard/",
+      to: "/dashboard",
       icon: <Home />,
       label: "Home",
     },
@@ -92,7 +93,6 @@ const Sidebar = () => {
     },
   ];
 
-  // Bottom navigation links
   const bottomLinks = [
     {
       to: "/dashboard/help",
@@ -105,6 +105,8 @@ const Sidebar = () => {
       label: "Settings",
     },
   ];
+
+  const isActive = (to: string) => pathname === to;
 
   return (
     <aside className="fixed left-0 top-0 bottom-0 w-16 bg-[#1A1F2C]/90 backdrop-blur-md flex flex-col items-center py-6 border-r border-white/10 shadow-lg z-30">
@@ -124,7 +126,7 @@ const Sidebar = () => {
             to={link.to}
             icon={link.icon}
             label={link.label}
-            isActive={link.to === "/"}
+            isActive={isActive(link.to)}
           />
         ))}
       </div>
@@ -136,7 +138,7 @@ const Sidebar = () => {
             to={link.to}
             icon={link.icon}
             label={link.label}
-            isActive={link.to === "/"}
+            isActive={isActive(link.to)}
           />
         ))}
       </div>

@@ -23,7 +23,7 @@ const DashboardLayout = () => {
   }, [pathname]);
 
   return (
-    <div className="flex h-screen bg-gray-900">
+    <div className="flex h-screen bg-gray-900/80">
       <Sidebar />
       <div className="flex flex-col flex-grow">
         <main className="flex-grow p-6 mt-2 ml-16 overflow-auto text-gray-200">

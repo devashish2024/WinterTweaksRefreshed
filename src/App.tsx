@@ -2,8 +2,9 @@ import SnowfallBackground from "@/components/layout/SnowflakeBackground";
 // import LoginForm from "./pages/Login";
 import "@fontsource-variable/rubik/wght.css";
 import DashboardLayout from "./components/layout/DashboardLayout";
-import DashboardHome from "./pages/Dashboard/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import DashboardHome from "./pages/Dashboard/Home/index";
 
 export default function App() {
   return (
