@@ -5,6 +5,7 @@ import DashboardLayout from "./components/layout/DashboardLayout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import DashboardHome from "./pages/Dashboard/Home/index";
+import DashboardTweaks from "./pages/Dashboard/Tweaks/index";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/dashboard/" element={<DashboardLayout />}>
             <Route index element={<DashboardHome />} />
-            <Route path="tweaks" element={"Tweaks"} />
+            <Route path="tweaks" element={<DashboardTweaks />} />
             <Route path="disk-cleanup" element={"Disk Cleanup"} />
             <Route path="help" element={"Help"} />
             <Route path="settings" element={"Settings"} />

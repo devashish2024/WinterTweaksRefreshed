@@ -1,0 +1,314 @@
+[
+  {
+    "name": "Optimize Windows Performance",
+    "description": "Applies general Windows optimizations to improve speed and responsiveness.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Improve Windows Privacy",
+    "description": "Disables telemetry, advertising, and location tracking features to enhance privacy.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Windows Telemetry",
+    "description": "Blocks the core telemetry services that send data to Microsoft servers.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable App Diagnostics & Telemetry",
+    "description": "Prevents apps from collecting and transmitting diagnostic data.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Turn Off Sync Features",
+    "description": "Stops syncing settings, themes, passwords, and data across Microsoft devices.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Customer Experience Program",
+    "description": "Opt out of Microsoft’s data collection for customer experience improvement.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Turn Off Windows Feedback",
+    "description": "Disables the Windows Feedback prompts and background telemetry.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Office Data Collection",
+    "description": "Prevents Microsoft Office from sending usage and diagnostic data.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Background Apps",
+    "description": "Prevents apps from running in the background to save resources.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Extra Diagnostic Services",
+    "description": "Disables redundant diagnostic services not essential to system stability.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Prevent Preinstalled App Reinstallation",
+    "description": "Stops automatic reinstallation of default Windows apps after updates.",
+    "subcategory": "Optimisations",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Diagnostic Services",
+    "description": "Terminates telemetry-related services to reduce background activity.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Printing & Maps Services",
+    "description": "Disables unnecessary print spooler and maps-related services.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Bluetooth Services",
+    "description": "Turns off Bluetooth-related services if not needed.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Turn Off SmartScreen",
+    "description": "Disables SmartScreen filter to reduce background activity and popups.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "File Explorer Tweaks",
+    "description": "Applies UI and performance tweaks to File Explorer.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Windows System Tweaks",
+    "description": "Enables minor system-wide improvements for usability and performance.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Advanced Tweaks",
+    "description": "Applies deeper system changes for performance gains.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Reduce Menu Delay",
+    "description": "Speeds up UI responsiveness by reducing menu animation delay.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Ads & Popups",
+    "description": "Removes Windows tips, ads, and suggestions from the UI.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Cortana",
+    "description": "Completely disables the Cortana assistant and related background processes.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Turn Off Error Reporting",
+    "description": "Prevents Windows from sending error reports to Microsoft.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Enable Game Mode",
+    "description": "Activates Windows Game Mode to prioritize game performance.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Log Only Critical Errors",
+    "description": "Limits event logging to critical errors only, reducing log overhead.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Disable Fault Tolerant Heap",
+    "description": "Turns off the Fault Tolerant Heap for better performance in legacy apps.",
+    "subcategory": "Extras",
+    "category": "Windows"
+  },
+  {
+    "name": "Fully Reset Network Settings",
+    "description": "Resets all network settings including adapters, DNS, and firewalls.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Optimize Network Adapter",
+    "description": "Tweak network adapter settings for lower latency and better throughput.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Enable Direct Cache Access",
+    "description": "Allows direct memory access from network buffers for faster data transfer.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Enable MSI Mode",
+    "description": "Enables Message Signaled Interrupts for network cards to reduce CPU load.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Set DNS Priority",
+    "description": "Optimizes DNS resolution order for faster domain lookup.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Disable NetBIOS over TCP/IP",
+    "description": "Shuts off outdated NetBIOS protocol to reduce attack surface and latency.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Disable Hidden Power Saving Features",
+    "description": "Disables unseen NIC power-saving features to maintain stable speeds.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Turn Off Network Limiting",
+    "description": "Removes limitations on bandwidth for system-reserved traffic.",
+    "subcategory": "Network Optimization",
+    "category": "Network"
+  },
+  {
+    "name": "Disable Nagle's Algorithm",
+    "description": "Improves TCP latency for real-time applications by disabling packet buffering.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "Network Throttling Index",
+    "description": "Adjusts registry to eliminate artificial limits on multimedia throughput.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "Enable Onboard Network Processor",
+    "description": "Offloads network processing to hardware to reduce CPU usage.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "Optimize Lanman Server",
+    "description": "Improves SMB server performance for file sharing and networking.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "Advanced Network Tweaks",
+    "description": "Enables several advanced registry and driver-level network optimizations.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "Set Network Adapter Core Priority",
+    "description": "Binds network processing to dedicated CPU cores for better performance.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "Registry Tweaks",
+    "description": "Applies system-level registry changes for network optimization.",
+    "subcategory": "Advanced Tweaks",
+    "category": "Network"
+  },
+  {
+    "name": "High Performance Power Plan",
+    "description": "Enables Windows High Performance power plan for consistent CPU clock speeds.",
+    "subcategory": "Power Plan Optimization",
+    "category": "Power"
+  },
+  {
+    "name": "Ultimate Performance Power Plan",
+    "description": "Activates the hidden Ultimate Performance power plan for workstation-level speed.",
+    "subcategory": "Power Plan Optimization",
+    "category": "Power"
+  },
+  {
+    "name": "Disable Power Saving on USB Devices",
+    "description": "Prevents USB devices from sleeping to ensure better stability and performance.",
+    "subcategory": "Advanced Power Settings",
+    "category": "Power"
+  },
+  {
+    "name": "Disable Processor Throttling",
+    "description": "Prevents CPU from reducing speed under load for maximum performance.",
+    "subcategory": "Advanced Power Settings",
+    "category": "Power"
+  },
+  {
+    "name": "Disable Link State Power Management",
+    "description": "Reduces latency by disabling PCI Express power-saving features.",
+    "subcategory": "Advanced Power Settings",
+    "category": "Power"
+  },
+  {
+    "name": "Disable Selective Suspend",
+    "description": "Prevents USB suspension to avoid stutter and input lag.",
+    "subcategory": "Advanced Power Settings",
+    "category": "Power"
+  },
+  {
+    "name": "Disable Idle Hard Disk Timeout",
+    "description": "Keeps hard disks active to reduce spin-up delays.",
+    "subcategory": "Advanced Power Settings",
+    "category": "Power"
+  },
+  {
+    "name": "Enable High Precision Event Timer",
+    "description": "Improves input response and timing precision by enabling HPET.",
+    "subcategory": "Latency & IO Tweaks",
+    "category": "General"
+  },
+  {
+    "name": "Disable Dynamic Ticks",
+    "description": "Improves real-time latency by disabling idle CPU timer coalescing.",
+    "subcategory": "Latency & IO Tweaks",
+    "category": "General"
+  },
+  {
+    "name": "Disable Timer Coalescing",
+    "description": "Improves input latency by forcing consistent timer interrupts.",
+    "subcategory": "Latency & IO Tweaks",
+    "category": "General"
+  },
+  {
+    "name": "Set Low Latency Scheduling",
+    "description": "Adjusts system scheduling to favor low-latency responsiveness.",
+    "subcategory": "Latency & IO Tweaks",
+    "category": "General"
+  },
+  {
+    "name": "Enable MSI Mode for GPU and Audio",
+    "description": "Lowers input and sound latency by enabling interrupt message mode.",
+    "subcategory": "Latency & IO Tweaks",
+    "category": "General"
+  }
+]
