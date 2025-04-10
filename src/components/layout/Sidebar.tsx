@@ -1,11 +1,4 @@
-import {
-  Snowflake,
-  Home,
-  Settings2,
-  HelpCircle,
-  Settings,
-  HardDrive,
-} from "lucide-react";
+import { Snowflake, Home, Settings2, HelpCircle, Settings } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
