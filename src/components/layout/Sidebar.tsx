@@ -106,7 +106,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-16 bg-[#1A1F2C]/90 backdrop-blur-md flex flex-col items-center py-6 border-r border-white/10 shadow-lg z-10">
+    <aside className="fixed left-0 top-0 bottom-0 w-16 bg-[#1A1F2C]/90 backdrop-blur-md flex flex-col items-center py-6 border-r border-white/10 shadow-lg z-30">
       <SidebarLink
         to="/"
         icon={
