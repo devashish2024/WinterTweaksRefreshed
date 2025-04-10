@@ -90,7 +90,7 @@ const Sidebar = () => {
 
   const bottomLinks = [
     {
-      to: "/dashboard/help",
+      to: "#",
       icon: <HelpCircle />,
       label: "Help",
     },
