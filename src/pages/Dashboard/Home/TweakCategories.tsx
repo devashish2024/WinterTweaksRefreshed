@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import tweaks from "@/assets/tweaks.json";
+import { useNavigate } from "react-router-dom";
 
 type Tweak = {
   name: string;
@@ -31,6 +32,8 @@ const subcategoryIcons: Record<string, React.ReactNode> = {
 };
 
 export default function TweakCategories() {
+  const navigate = useNavigate();
+
   const subcategories = useMemo(() => {
     const uniqueSubcategories = Array.from(
       new Set(tweaks.map((tweak: Tweak) => tweak.subcategory))
@@ -56,6 +59,11 @@ export default function TweakCategories() {
     });
   }, []);
 
+  const handleCategoryClick = (subcategory: string) => {
+    const categoryId = subcategory.replace(/\s+/g, "_");
+    navigate(`/dashboard/tweaks#${categoryId}`);
+  };
+
   return (
     <div>
       <h2 className="text-xl font-semibold mb-3">Tweak Categories</h2>
@@ -64,7 +72,8 @@ export default function TweakCategories() {
           <Button
             key={index}
             variant="outline"
-            className="flex flex-row items-center justify-between h-16 py-2 px-4"
+            className="flex flex-row items-center justify-between h-16 py-2 px-4 cursor-pointer"
+            onClick={() => handleCategoryClick(subcategory.name)}
           >
             <div className="flex items-center">
               {subcategory.icon}

@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import {
   Card,
@@ -13,6 +13,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Search, X } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 import tweaks from "@/assets/tweaks.json";
 
@@ -25,6 +26,8 @@ type Tweak = {
 };
 
 const Tweaks = () => {
+  const location = useLocation();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
   const [showEnabled, setShowEnabled] = useState(true);
@@ -32,6 +35,31 @@ const Tweaks = () => {
   const [enabledTweaks, setEnabledTweaks] = useState<Record<string, boolean>>(
     {}
   );
+
+  const subcategoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  useEffect(() => {
+    const hash = location.hash.substring(1);
+
+    if (hash) {
+      const targetSubcategory = hash.replace(/_/g, " ");
+
+      const targetTweak = tweaks.find(
+        (tweak: Tweak) => tweak.subcategory === targetSubcategory
+      );
+
+      if (targetTweak) {
+        setActiveCategory(targetTweak.category);
+
+        setTimeout(() => {
+          const element = subcategoryRefs.current[targetSubcategory];
+          if (element) {
+            element.scrollIntoView({ behavior: "instant", block: "nearest" });
+          }
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   const categories = useMemo(() => {
     const uniqueCategories = new Set(
@@ -165,6 +193,10 @@ const Tweaks = () => {
           Object.entries(tweaksBySubcategory).map(([subcategory, tweaks]) => (
             <Card
               key={subcategory}
+              id={subcategory.replace(/\s+/g, "_")}
+              ref={(el) => {
+                subcategoryRefs.current[subcategory] = el;
+              }}
               className="bg-slate-800 border-slate-700 text-slate-100 shadow-blue-900/10 shadow-lg"
             >
               <CardHeader className="border-b border-slate-700">
