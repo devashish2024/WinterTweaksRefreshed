@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# WinterTweaks Refreshed UI – Abandoned Client Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**WinterTweaks** is a Windows optimization application. I was hired to redesign its user interface.
 
-Currently, two official plugins are available:
+After fully redesigning the UI and sharing a live preview, the client refused to complete the agreed payment of 20$ more (total of 5 + 20$). They simply said:  
+> *"I don't need your work now."*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Despite several discussions and a partial $5 payment, the rest of the deal was never honored. As a result, I’ve chosen to publicly open-source the UI I designed for this project. I might also write a blog post on this, soon.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚫 Lesson Learned
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Going forward, I will no longer:
+- Begin client work without full or milestone-based payment in advance.
+- Share live previews of unreleased work without compensation.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✅ License & Usage
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+This UI code is open-sourced for others to benefit from.  
+If you're building a similar Windows tweaks/optimization tool, you're welcome to use this repo as a reference or starting point for your design.
+
+---
+
+## 📦 Tech Stack Used
+
+- React + TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Electron (planned integration)
+
+---
+
+## 💬 Final Note
+
+This project represents many late nights and sincere effort. While the original client backed out, I hope this work proves useful to someone who appreciates clean design and respects developer time.
+
+Feel free to fork but please don't open any issues or PRs as I'm not looking to extend this.
+Thanks for stopping by.
